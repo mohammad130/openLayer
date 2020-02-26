@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.2.1/build/ol.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.2.1/css/ol.css">
+    <title>Open Layer</title>
+    <link rel="stylesheet" href="/v6.2.1-dist/ol.css">
+</head>
+<body>
+    <div id="js-map" class="map"></div>
+    <!-- we can add them here instade of app.js-->
+    <script>
+         const mpa =new ol.Map({
+        view : new  ol.View({
+            center :[0,0],
+            zoom:2
+        }),
+        layers:[
+            new ol.layer.Tile({
+                source:new ol.source.OSM()
+            })
+        ],
+        target :'js-map'
+    })
+    </script>
+
+
+    <script src="/app.js"></script>
+    <script src="/v6.2.1-dist/ol.js"></script>
+</body>
+</html>
